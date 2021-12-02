@@ -7,6 +7,14 @@
   font-family: 'Be Vietnam Pro', sans-serif;
   color: #232C50;
 }
+body{
+  background-image: url(../img/bg-tablet-pattern.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-y: -50px;
+  background-position-x: 60px;
+}
+
 h2{
   font-size: 2rem;
 }
@@ -14,15 +22,27 @@ header, .coments, footer{
   padding: 0 1rem;
 }
 
-/* .bg-tablet{
-  background-image: url(../img/bg-tablet-pattern.svg);
-  background-size: 110%;
-  background-repeat: no-repeat;
-  background-position-y: -7rem;
-  background-position-x: 4rem;
-} */
+.bg-tablet{
+  overflow: hidden;
+}
+.bg-tablet img{
+  position: absolute;
+  width: 450px;
+  z-index: -10000;
+}
+.bg-top img{
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.bg-mid img{
+  top: 330px;
+  left: 230px;
+  /* width: 600px; */
+}
 
 header{
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,6 +61,12 @@ header .btn-menu, header ul{
 
 main{
   text-align: center;
+
+  background-image: url(../img/bg-tablet-pattern.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-y: 400px;
+  background-position-x: 250px;
 }
 main .statistics{
   display: flex;
@@ -51,16 +77,15 @@ main .statistics{
 main .img-statistics{
   padding: 0 1rem;
 }
-main .statistics img{
+main .statistics .img-statistics img{
   width: 100%;
 }
 main .get-started{
   text-align: center;
-  background-position-y: 0rem;
-  background-position-x: 14rem;
   padding-bottom: 6rem;
 }
 main .get-started p, main .about p{
+  margin: 2rem 0;
   color: #B3B2B7;
 }
 main .get-started p, main .get-started h2{
@@ -123,14 +148,14 @@ main .get-started h2{
 }
 .about article h3{
   background-color: #FFF0EB;
-  padding: 0.5rem 0 .5rem 3rem;
+  padding: 0.5rem 0 .5rem 5rem;
   font-size: 1rem;
   font-weight: bold;
   width: 100%;
   border-radius: 50px 0 0 50px;
   position: relative;
   margin-left: 1rem;
-  text-align: center;
+  text-align: start;
 }
 .title h3::before{
   background-color: #f3603b;
@@ -208,11 +233,9 @@ footer{
   text-align: center;
 }
 
-/* footer form{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-} */
+footer form{
+  padding: 2rem 1rem;
+}
 form .email-form{
   display: flex;
 }
@@ -289,6 +312,26 @@ footer .logo-footer p{
   }
 } */
 @media screen and (min-width:768px) {
+  body{
+    background-position-y: -110px;
+    background-position-x: 110%;
+    background-size: 50%;
+  }
+  .bg-tablet img{
+    position: absolute;
+    width: 450px;
+    z-index: -10000;
+  }
+  .bg-top img{
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+  .bg-mid img{
+    bottom: 23%;
+    left: -430px;
+    width: 600px;
+  }
   header{
     padding: 1rem 6%;
   }
@@ -316,6 +359,11 @@ footer .logo-footer p{
     display: block;
   }
 
+  main{
+    background-position-y: 70%;
+    background-position-x: -60%;
+    background-size: 50%;
+  }
   main .statistics{
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -336,9 +384,11 @@ footer .logo-footer p{
     padding: 0 6rem 0 0;
   }
   main .get-started h2{
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   main .get-started p, main .about p{
+    margin: 2rem 0;
+    /* padding: 0; */
     width: 70%;
   }
   main .about{
@@ -362,11 +412,15 @@ footer .logo-footer p{
   }
 
   .coments .container-coments{
+    padding: 0 6%;
     display: flex;
   }
   .coment{
     display: block;
     margin: 5rem 1rem 1rem;
+  }
+  .coment p{
+    padding: 1rem;
   }
   .coments .slider{
     display: none;
@@ -407,6 +461,7 @@ footer .logo-footer p{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0;
 }
   footer .logo-footer{
     display: flex;
@@ -431,7 +486,7 @@ footer .logo-footer p{
 
 
 .fadeInDown{
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-fill-mode: both;
   animation-name: fadeInDown;
   will-change: fadeInDown;
