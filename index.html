@@ -7,12 +7,16 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <link rel="shortcut icon" href="./img/Logo-color-white.svg" type="image/x-icon">
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/animations.css">
   <title>Examen front</title>
 </head>
 <body>
   <header class="fadeInDown">
     <div class="logo">
-      <img src="./img/logo.svg" alt="logo">
+      <a href="#">
+        <img src="./img/logo.svg" alt="logo">
+      </a>
+      <h1 style="display: none;">manage</h1>
     </div>
     <nav>
       <ul>
@@ -30,11 +34,11 @@
       </label>
       <nav class="list-menu-burguer">
         <ul style="display: block;">
-          <li>Pricing</li>
-          <li>Product</li>
-          <li>About Us</li>
-          <li>Careers</li>
-          <li>Community</li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Community</a></li>
         </ul>
       </nav>
     </div>
@@ -62,7 +66,7 @@
 
     <section class="about">
       <article>
-        <h2>What's fiferent abut Manage?</h2>
+        <h2>What's diferent abut Manage?</h2>
         <p>
           Manage provides all the functionality your
           teas needs, without the complexity. Our software is tailor-made for modern digital product teams
@@ -139,17 +143,17 @@
     <section>
       <h2>Simplify how your team works today.</h2>
       <button class="btn-getStarted">Get Started</button>
+      <img src="./img/bg-simplify-section-mobile.svg" alt="">
     </section>
   </main>
 
   <footer>
-    <form action="./index.html" method="POST">
+    <form action="./views/form.html" method="get">
       <div class="email-form">
-        <input type="email" placeholder="Updates in your inbox..." required>
+        <input type="email" id="email" name="email" placeholder="Updates in your inbox..." required>
         <button type="submit">Go</button>
       </div>
       <p>Copyright 2020. All Rights Reserved</p>
-
     </form>
     
     <ul>
@@ -183,8 +187,9 @@
         <i class="fab fa-instagram"></i>
       </a>
     </div>
-    
-      <img src="./img/Logo-color-white.svg" alt="">
+      <a href="#">
+        <img src="./img/Logo-color-white.svg" alt="">
+      </a>
       <p>Copyright 2020. All Rights Reserved</p>
     </div>
   </footer>

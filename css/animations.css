@@ -1,0 +1,88 @@
+/* menú mobile desplegable */
+.list-menu-burguer{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: -300%;
+  text-align: center;
+  transition: all ease 1s;
+}
+.list-menu-burguer li a{
+  text-decoration: none;
+}
+.list-menu-burguer li a:hover{
+  color: #fff;
+}
+.list-menu-burguer li{
+  list-style: none;
+}
+.list-menu-burguer li:hover{
+  background-color: #1e1e26;
+}
+header .menu input:checked ~ .list-menu-burguer{
+  top: 0rem;
+  left: 0;
+  background-color: #fff0ec;
+  padding: 1rem 0;
+}
+
+label i{
+  transition: all ease 1s;
+  cursor: pointer;
+}
+header .menu input:checked ~ label i{
+  transform: rotate(270deg);
+  color: #F3603B;
+}
+
+
+/* animaciones de inicio */
+.fadeInDown{
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-name: fadeInDown;
+  will-change: fadeInDown;
+}
+@keyframes fadeInDown {
+  from{
+    opacity: 0;
+    transform: translate3d(0,-100%,0);
+  }
+  to{
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+
+.fadeIn{
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+  will-change: transform;
+}
+
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.fadeInUp{
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-name: fadeInUp;
+  will-change: fadeInUp;
+}
+@keyframes fadeInUp {
+  from{
+    opacity: 0;
+    transform: translate3d(0,100%,0);
+  }
+  to{
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
