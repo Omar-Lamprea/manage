@@ -47,14 +47,22 @@ header{
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  /* position: sticky; */
+  position: sticky;
   top: 0;
-  /* background-color: #fff0ece3; */
-  z-index: 1;
+  background-color: #fff0ec99;
+  z-index: 20;
 }
 header .menu{
   font-size: 2rem;
 }
+header .menu input{
+  display: none;
+}
+header .menu label{
+  position: relative;
+  z-index: 10;
+}
+
 header .btn-menu, header ul{
   display: none;
 }
@@ -348,7 +356,10 @@ footer .logo-footer p{
     list-style: none;
     margin: 0rem .5rem;
   }
-  nav ul li:hover{
+  nav ul li a{
+    text-decoration: none;
+  }
+  nav ul li a:hover{
     color: #B3B2B7;
     cursor: pointer;
   }
@@ -482,6 +493,39 @@ footer .logo-footer p{
 }
 
 
+
+
+/* animations */
+.list-menu-burguer{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: -300%;
+  text-align: center;
+  transition: all ease 1s;
+}
+.list-menu-burguer li{
+  list-style: none;
+}
+.list-menu-burguer li:hover{
+  background-color: #1e1e26;
+  color: #fff;
+}
+header .menu input:checked ~ .list-menu-burguer{
+  top: 0rem;
+  left: 0;
+  background-color: #fff0ec;
+  padding: 1rem 0;
+}
+
+label i{
+  transition: all ease 1s;
+  cursor: pointer;
+}
+header .menu input:checked ~ label i{
+  transform: rotate(270deg);
+  color: #F3603B;
+}
 
 
 
